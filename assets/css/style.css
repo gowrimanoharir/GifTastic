@@ -3,13 +3,28 @@ body{
 
 }
 
-.cs-img{
-  height: 300px;
-  width: 300px;
-  margin: 15px;
+.cs-input{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
 }
 
+.cs-img{
+  height: 300px;
+  width: 100%;
+  margin: 15px;
+  display: inline-block;
+}
 
+.cs-btngrp{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+
+.cs-gifbtn{
+  display: inline-block;
+}
 
 
 /*Change width and background for footer section*/

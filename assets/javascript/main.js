@@ -1,7 +1,7 @@
 var giftastic = {
-	limit : 10,
+	limit : 12,
 	searchfor : ['star wars', 'puppies', 'kittens'],
-	rating : 'pg',
+	rating : 'pg13',
 	result: null,
 	getGifs: function(dispFor)
 	{
@@ -17,14 +17,21 @@ var giftastic = {
 	displayGifs: function(){
 			$('#gifimg').empty();
 			for(i=0; i<this.limit; i++){
-				var im = $('<img>');
+				var imdiv=$('<div>');
+				var rtng=$('<h4>');
+				var im=$('<img>');
 				im.addClass('js-img cs-img');
 				im.attr({
 					'state': 'still',
 					'still_src': this.result.data[i].images.downsized_still.url,
 					'animate_src': this.result.data[i].images.downsized.url,
-					'src': this.result.data[i].images.downsized_still.url});
-				$('#gifimg').append(im);
+					'src': this.result.data[i].images.downsized_still.url
+				});
+				rtng.text('Rating: '+this.result.data[i].rating);
+				imdiv.addClass('col-md-4 col-xs-12');
+				rtng.addClass('text-center')
+				imdiv.append(rtng).append(im);
+				$('#gifimg').append(imdiv);
 			}
 	},
 	displayButtons: function()
@@ -33,7 +40,7 @@ var giftastic = {
 
 		for(i=0; i<this.searchfor.length; i++){
 			var b = $('<button>');
-			b.addClass('js-gifbtn');
+			b.addClass('js-gifbtn cs-gifbtn');
 			b.attr('btn-val', this.searchfor[i]);
 			b.text(this.searchfor[i]);
 			$('#gifbuttons').append(b);
