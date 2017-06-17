@@ -24,7 +24,7 @@ var giftastic = {
 	 when a button is clicked*/
 	getGifs: function(dispFor)
 	{
-		var searchapi="http://api.giphy.com/v1/gifs/search?api_key=dc6zaTOxFJmzC&q="+dispFor+"&limit="+this.limit+"&rating="+this.rating;
+		var searchapi="https://api.giphy.com/v1/gifs/search?api_key=dc6zaTOxFJmzC&q="+dispFor+"&limit="+this.limit+"&rating="+this.rating;
 		$.ajax({
 			url: searchapi,
 			method: "GET"
