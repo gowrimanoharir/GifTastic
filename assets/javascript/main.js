@@ -50,7 +50,7 @@ var giftastic = {
 					'src': this.result.data[i].images.downsized_still.url
 				});
 				rtng.text('Rating: '+this.result.data[i].rating);
-				imdiv.addClass('col-md-4 col-xs-12');
+				imdiv.addClass('col-md-4 col-sm-6 col-xs-12');
 				rtng.addClass('text-center')
 				imdiv.append(rtng).append(im);
 				$('#gifimg').append(imdiv);
@@ -64,7 +64,7 @@ var giftastic = {
 
 		for(i=0; i<this.searchfor.length; i++){
 			var b = $('<button>');
-			b.addClass('js-gifbtn cs-gifbtn col-md-2 col-xs-6');
+			b.addClass('js-gifbtn cs-gifbtn col-md-2 col-xs-4');
 			b.attr('btn-val', this.searchfor[i]);
 			b.text(this.searchfor[i]);
 			$('#gifbuttons').append(b);
