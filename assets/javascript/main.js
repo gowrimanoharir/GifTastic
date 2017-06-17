@@ -3,7 +3,7 @@
 var giftastic = {
 	limit : 12, //no of GIFs to request
 	//holds the search terms for initial button display
-	searchfor : ['falling', 'yoda', 'flying dog', 'office', 'face palm','parkour', 'donald duck', 'penguin'],
+	searchfor : ['falling', 'yoda', 'flying dog', 'office', 'face palm','parkour', 'donald duck', 'penguin', 'test'],
 	rating : 'pg13', //holds rating under which to request GIFs
 	result: null, //to hold the API result
 
@@ -13,10 +13,17 @@ var giftastic = {
 	{
 		var add=$('#userip').val();
 		if(add!==''){
+			//pushes the word to the array
 			this.searchfor.push(add);
+
+			//calls the button render function
 			this.displayButtons();
+
+			//calls  the function to get the GIFs from API for currently addded word
 			this.getGifs(add);
 		}
+
+		//empties the userinput in text box
 		$('#userip').val('');
 	},
 
