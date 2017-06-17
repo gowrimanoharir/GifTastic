@@ -1,37 +1,106 @@
-/*Define back ground gradient color*/
-body{
-
+/*Define min height so as to apply background color for entire page*/
+html, body{
+  min-height: 100%;
 }
 
+/*Define back ground gradient color and font settings*/
+body{
+  font-family: 'Amatic SC', cursive;
+  color: #adb9c2;
+  background: #000000;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to bottom, #434343, #000000);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to bottom, #434343, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+/*Set page load text size*/
+.cs-wlctxt{
+  font-size: 40px;
+}
+
+/*Set page containet bottom margin*/
+.gifcnt{
+  margin-bottom: 60px;
+}
+
+/*set Header font styles*/
+.hdrfnt{
+  font-size: 50px;
+  font-weight: bold;
+  padding-top: 0;
+  margin: 0;
+}
+
+/*Define display settings for header, textbox and add button*/
 .cs-input{
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: row;
   justify-content: space-around;
 }
 
+/*Define style for input box*/
+.cs-srchbox{
+  color: #000;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/*Define height and margin for textbox and add button*/
+.cs-srchbox, .cs-addbtn{
+  margin: 15px;
+  height: 40px;
+}
+
+/*Define display settings for the GIF buttons*/
+.cs-btngrp{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  margin: 20px; 
+}
+
+.cs-gifbtn{
+  display: inline-block;
+  margin: 15px;
+}
+
+
+/*Define style for all buttons on page*/
+.cs-addbtn, .cs-gifbtn{
+  height: 40px;
+  color: #000;
+  font-size: 25px;
+  font-weight: bold;
+  border-style: hidden;
+  box-shadow: 3px 3px;  
+  background: #8e9eab;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to left, #b0bcc5, #8e9eab);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to left, #b0bcc5, #8e9eab); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+/*Set font for rating display*/
+.cs-rtng{
+  font-size: 25px;
+  font-weight: bold;
+}
+
+/*Define style for all GIFs*/
 .cs-img{
   height: 300px;
   width: 100%;
   margin: 15px;
   display: inline-block;
+  border: 2px solid black;
 }
-
-.cs-btngrp{
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-around;
-}
-
-.cs-gifbtn{
-  display: inline-block;
-}
-
 
 /*Change width and background for footer section*/
 .footer{
+  margin-top: 20px;
 	width: 100%;
 	background-color: #1c1e22;
 	padding-top: 5px;
+  color: #eef2f3;
+  font-weight: bold;
 }
 
 

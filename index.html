@@ -15,23 +15,40 @@
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
 
 	<!--Link the Google fonts-->
-	<link href="https://fonts.googleapis.com/css?family=Orbitron|Questrial" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet">
 </head>
 <body>
-	<div class='container'>
-		<div class='row cs-input'>
-			<input id='userip' class='cs-srchbox' type="text" value="Add Your Own Button">
-			<button id='add-btn' class='cs-addbtn'>Add</button>
+		<!--HTML to display header, text box and add button-->
+		<div class='row cs-input col-md-12 col-xs-12'>
+				<div class="col-md-3"></div>
+				<p class="hdrfnt col-md-6 text-center">GIFTASTIC</p>
+				<input id='userip' class='cs-srchbox col-md-2' type="text" placeholder="Add Your Own Button">
+				<button id='add-btn' class='cs-addbtn col-md-1'>Add</button>
 		</div>
-		<div id='gifbuttons' class='row cs-btngrp'>
-			
-		</div>
-		<div>
-			<div id='gifimg' class='col-md-12 col-xs-12'>
+
+	<!--Define container to display the GIF buttons and images-->
+	<div class='container gifcnt'>
+
+		<!--section to display the GIF buttons-->
+		<div id='gifbuttons' class='row cs-btngrp col-md-12 col-xs-12'>
 				
+		</div>
+
+		<div>
+			<!--section to display welcome text on page load and the GIF images once a button is clicked-->
+			<div id='gifimg' class='col-md-12 col-xs-12'>
+				<p class='text-center cs-wlctxt'>Welcome to Giftastic!! Click on a button to enjoy GIFs. Add button with your choice as well.</p>
 			</div>
 		</div>
 	</div>
+
+	<!--section for footer-->
+	<div class="container footer navbar-fixed-bottom">
+	     <p class="text-muted text-center">
+	     	<span>&copy; 2017 Copyright Gowri M Rajasekaran</span>
+	     </p>
+	</div>
+
 	<!-- Added link to the jQuery Library -->
   <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 
